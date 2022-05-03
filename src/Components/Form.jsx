@@ -18,9 +18,9 @@ export const Form = () => {
         dispatch(createTodo(todo))
     }
   return (
-    <form onSubmit={submitHandler} style={{width:500, margin: '20px auto'}}>
-        <input value={value} onChange={(event) => setValue(event.target.value)} placeholder='todo text here...' type="text"  style={{width:'100%'}}/><br />
-        <button>add</button>
+    <form  className="input-group flex h-screen w-full items-center" onSubmit={submitHandler} style={{width:500, margin: '20px auto'}}>
+        <input className='input input-bordered' value={value} onChange={(event) => setValue(event.target.value)} placeholder='todo text here...' type="text"  style={{width:'100%'}}/>
+        <button className='btn btn-outline'>add</button>
     </form>
   )
 }
